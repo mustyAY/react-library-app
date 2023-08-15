@@ -1,18 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import Rating from "../components/ui/Rating";
 import Price from "../components/ui/Price";
 import Book from "../components/ui/Book";
 
-const BookInfo = ({ bookInfo }) => {
+const BookInfo = ({ bookInfo, addToCart }) => {
   const { id } = useParams();
   const clickedBook = bookInfo.find((book) => book.id === +id);
 
-  const [cart, setCart] = useState([]);
-  function addToCart(){
-    setCart(prevCart => {})
-  }
   return (
     <div id="books__body">
       <main id="books__main">
