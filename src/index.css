@@ -91,6 +91,7 @@ button:active {
 }
 
 .logo {
+  filter: grayscale(1);
   width: 160px;
 }
 

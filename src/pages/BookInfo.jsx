@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Rating from "../components/ui/Rating";
 import Price from "../components/ui/Price";
@@ -8,6 +8,12 @@ import Book from "../components/ui/Book";
 const BookInfo = ({ bookInfo, addToCart }) => {
   const { id } = useParams();
   const clickedBook = bookInfo.find((book) => book.id === +id);
+  const [added, setAdded] = useState(false);
+
+  function addBookToCart(clickedBook) {
+    setAdded(true);
+    addToCart(clickedBook);
+  }
 
   return (
     <div id="books__body">
@@ -24,7 +30,11 @@ const BookInfo = ({ bookInfo, addToCart }) => {
             </div>
             <div className="book__selected">
               <figure className="book__selected--figure">
-                <img src={clickedBook.url} alt="" className="book__selected--img"/>
+                <img
+                  src={clickedBook.url}
+                  alt=""
+                  className="book__selected--img"
+                />
               </figure>
               <div className="book__selected--description">
                 <h2 className="book__selected--title">{clickedBook.title}</h2>
@@ -50,7 +60,16 @@ const BookInfo = ({ bookInfo, addToCart }) => {
                     facilis omnis aspernatur provident et voluptatibus odio!
                   </p>
                 </div>
-                <button className="btn" onClick={addToCart}>Add to Cart</button>
+                {added ? (
+                  <button className="btn">Checkout</button>
+                ) : (
+                  <button
+                    className="btn" 
+                    onClick={() => addBookToCart(clickedBook)}
+                  >
+                    Add to Cart
+                  </button>
+                )}
               </div>
             </div>
           </div>

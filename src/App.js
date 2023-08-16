@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -10,9 +10,14 @@ import Cart from "./pages/Cart";
 
 function App() {
   const [cart, setCart] = useState([]);
-  function addToCart() {
-    setCart((prevCart) => {});
+
+  function addToCart(clickedBook) {
+    setCart([...cart, clickedBook])
   }
+
+  useEffect(() => {
+    console.log(cart)
+  }, [cart])
 
   return (
     <Router>
@@ -26,11 +31,11 @@ function App() {
           />
           <Route
             path="/books/:id"
-            Component={() => <BookInfo bookInfo={books} />}
+            Component={() => <BookInfo bookInfo={books} addToCart={addToCart} />}
           />
           <Route
             path="/cart"
-            Component={() => <Cart cartBook={books} addToCart={addToCart} />}
+            Component={() => <Cart cartBook={books} />}
           />
         </Routes>
         <Footer />
