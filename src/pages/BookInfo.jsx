@@ -64,7 +64,7 @@ const BookInfo = ({ bookInfo, addToCart }) => {
                   <button className="btn">Checkout</button>
                 ) : (
                   <button
-                    className="btn" 
+                    className="btn"
                     onClick={() => addBookToCart(clickedBook)}
                   >
                     Add to Cart
