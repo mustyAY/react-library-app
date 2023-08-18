@@ -5,13 +5,12 @@ import Rating from "../components/ui/Rating";
 import Price from "../components/ui/Price";
 import Book from "../components/ui/Book";
 
-const BookInfo = ({ bookInfo, addToCart }) => {
+const BookInfo = ({ bookInfo, addToCart, cart }) => {
   const { id } = useParams();
   const clickedBook = bookInfo.find((book) => book.id === +id);
-  const [added, setAdded] = useState(false);
+  const bookExistsOnCart = cart.find((book) => book.id === +id);
 
   function addBookToCart(clickedBook) {
-    setAdded(true);
     addToCart(clickedBook);
   }
 
@@ -60,7 +59,7 @@ const BookInfo = ({ bookInfo, addToCart }) => {
                     facilis omnis aspernatur provident et voluptatibus odio!
                   </p>
                 </div>
-                {added ? (
+                {bookExistsOnCart ? (
                   <button className="btn">Checkout</button>
                 ) : (
                   <button

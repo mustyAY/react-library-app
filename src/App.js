@@ -14,7 +14,7 @@ function App() {
   function addToCart(clickedBook) {
     setCart([...cart, clickedBook])
   }
-
+ 
   useEffect(() => {
     console.log(cart)
   }, [cart])
@@ -31,7 +31,7 @@ function App() {
           />
           <Route
             path="/books/:id"
-            Component={() => <BookInfo bookInfo={books} addToCart={addToCart} />}
+            Component={() => <BookInfo bookInfo={books} addToCart={addToCart} cart={cart} />}
           />
           <Route
             path="/cart"
