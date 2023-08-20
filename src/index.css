@@ -421,7 +421,7 @@ FEATURES
 .book__img--wrapper {
   margin-bottom: 8px;
   border-radius: 4px;
-  aspect-ratio: 0.7;
+  /* aspect-ratio: 0.7; */
   overflow: hidden;
   display: flex;
 }
