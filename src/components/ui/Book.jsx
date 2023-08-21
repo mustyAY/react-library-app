@@ -7,8 +7,6 @@ const Book = ({ book }) => {
 
   const [img, setImg] = useState();
 
-  
-
   useEffect(() => {
     const image = new Image();
     image.src = book.url;

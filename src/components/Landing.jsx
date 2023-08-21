@@ -1,5 +1,5 @@
 import React from "react";
-import UndrawBooks from '../assets/undraw_reading_time.svg'
+import UndrawBooks from '../assets/Undraw_Books.svg'
 import { Link } from "react-router-dom";
 
 const Landing = () => {

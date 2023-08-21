@@ -5,7 +5,6 @@ const Books = ({ renderBooks }) => {
   const [books, setBooks] = useState(renderBooks);
 
   function filterBooks(filter) {
-    console.log(filter);
     if (filter === "LOW_TO_HIGH") {
       setBooks(
         books

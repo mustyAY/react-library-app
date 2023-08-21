@@ -40,10 +40,6 @@ function App() {
     setCart(cart.filter((item) => item.id !== clickedBook.id));
   }
 
-  useEffect(() => {
-    console.log(cart);
-  }, [cart]);
-
   return (
     <Router>
       <div className="App">

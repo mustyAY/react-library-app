@@ -1,5 +1,5 @@
 import React from "react";
-import EmptyCart from "../assets/empty_cart.svg";
+import EmptyCart from "../assets/undraw_empty_cart.svg";
 import { Link } from "react-router-dom";
 
 const Cart = ({ cart, changeQuantity, removeBook }) => {
@@ -77,7 +77,7 @@ const Cart = ({ cart, changeQuantity, removeBook }) => {
                           max={99}
                           value={clickedBook.quantity}
                           onChange={(event) =>
-                            changeQuantity(clickedBook, event.target.value)
+                          changeQuantity(clickedBook, event.target.value)
                           }
                         />
                       </div>

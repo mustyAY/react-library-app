@@ -91,7 +91,6 @@ button:active {
 }
 
 .logo {
-  filter: grayscale(1);
   width: 160px;
 }
 
@@ -222,7 +221,7 @@ LANDING
 */
 
 #landing {
-  background-color: rgba(115, 66, 214, 0.1);
+  background-color: rgba(152, 251, 152, 0.1);
   padding-top: 64px;
 }
 
@@ -361,7 +360,7 @@ FEATURES
 
 #features {
   padding-top: 8vw;
-  background-color: rgba(115, 66, 214, 0.1);
+  background-color: rgba(152, 251, 152, 0.1);
 }
 
 .books {
@@ -421,7 +420,6 @@ FEATURES
 .book__img--wrapper {
   margin-bottom: 8px;
   border-radius: 4px;
-  /* aspect-ratio: 0.7; */
   overflow: hidden;
   display: flex;
 }
@@ -453,7 +451,7 @@ EXPLORE
 */
 
 #explore {
-  background-color: rgba(115, 66, 214, 0.1);
+  background-color: rgba(152, 251, 152, 0.1);
 }
 
 /* 
@@ -497,7 +495,7 @@ BOOKS PAGE
 */
 
 #books__body {
-  background-color: rgba(115, 66, 214, 0.1);
+  background-color: rgba(152, 251, 152, 0.1);
   flex: 1;
   display: flex;
   flex-direction: column;
