@@ -168,7 +168,8 @@ button:active {
 
 .menu__backdrop {
   position: absolute;
-  background-color: #242424;
+  background-color: #3EB489;
+  opacity: 0.98;
   top: 0;
   left: 0;
   width: 100vw;
@@ -226,7 +227,7 @@ LANDING
 }
 
 header {
-  height: calc(100vh - 80px);
+  height: 100vh;
 }
 
 .header__container {
@@ -247,13 +248,7 @@ header {
 
 .header__img--wrapper {
   padding: 20px;
-
-  /* Added this after the tutorial to 
-  show it over the wave on larger screens */
   z-index: 50;
-  
-  /* Added this after the tutorial to 
-  make landing page responsive on laptops */
   max-height: 50vh;
 }
 
